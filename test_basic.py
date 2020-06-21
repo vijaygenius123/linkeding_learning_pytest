@@ -1,8 +1,13 @@
+
+def setup_function(func):
+    print("Running Setup")
+
+
+def teardown_function(func):
+    print("Running Teardown")
+
+
 # will run as a test
 def test_basic():
-    assert True
-
-
-# Will be ignored
-def basic_test():
+    print("Running Test")
     assert True
