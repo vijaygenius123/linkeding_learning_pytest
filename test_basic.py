@@ -1,20 +1,11 @@
+import pytest
 
-def setup_module(module):
-    print("Setup Module")
-
-def teardown_module(module):
-    print("Teardown Module")
-
-def setup_function(func):
-    print("Running Setup")
-
-
-def teardown_function(func):
-    print("Running Teardown")
-
+@pytest.fixture
+def setup():
+    print("Setup")
 
 # will run as a test
-def test_basic():
+def test_basic(setup):
     print("Running Test")
     assert True
 
