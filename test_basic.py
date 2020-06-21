@@ -10,6 +10,7 @@ def test_basic(setup):
     assert True
 
 # will run as a test
+@pytest.mark.usefixtures("setup")
 def test_func():
     print("Running Test Func")
     assert True
