@@ -1,12 +1,16 @@
 import pytest
 
 def fizzBuzz(value):
-    if value % 3 == 0:
+    if isMultiple(value,3):
+        if isMultiple(value,5):
+            return "FizzBuzz"
         return "Fizz"
-    if value % 5 == 0:
+    if isMultiple(value,5):
         return "Buzz"
     return str(value)
 
+def isMultiple(value, mod):
+    return value % mod == 0
 
 def checkFizzBuzz(value, expected):
     retval = fizzBuzz(value)
@@ -33,3 +37,6 @@ def test_returnsFizzWith6PassedIn():
 
 def test_returnsBuzzWith10PassedIn():
     checkFizzBuzz(10,"Buzz")
+
+def test_returnsFizzBuzzWith15PassedIn():
+    checkFizzBuzz(15,"FizzBuzz")
