@@ -1,13 +1,13 @@
 
 Todo:
-  ✔ Can Call FizzBuzz @started(20-06-21 21:16) @done(20-06-21 21:18) @lasted(2m6s)
-  ✔ Get 1 When I Pass In 1 @started(20-06-21 21:18) @done(20-06-21 21:19) @lasted(1m38s)
-  ✔ Get 2 When I Pass In 2 @started(20-06-21 21:20) @done(20-06-21 21:21) @lasted(1m22s)
   ☐ Get Fizz When I Pass In 3
   ☐ Get Buzz When I Pass In 5
   ☐ Get Fizz when I Pass In 6 ( multiple of 3)
   ☐ Get Buzz When I Pass In 10 (multiple of 5)
   ☐ Get FizzBuzz When I Pass In 15 (multiple of 3 & 5)
+
   
-
-
+Archive:
+  ✔ Can Call FizzBuzz @started(20-06-21 21:16) @done(20-06-21 21:18) @lasted(2m6s) @project(Todo)
+  ✔ Get 1 When I Pass In 1 @started(20-06-21 21:18) @done(20-06-21 21:19) @lasted(1m38s) @project(Todo)
+  ✔ Get 2 When I Pass In 2 @started(20-06-21 21:20) @done(20-06-21 21:21) @lasted(1m22s) @project(Todo)
