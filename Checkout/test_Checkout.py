@@ -22,3 +22,9 @@ def test_canAddItemPrice(checkout):
 
 def test_canAddItem(checkout):
     checkout.addItem("Test")
+
+def test_canCalculateTotal(checkout):
+    checkout.addItemPrice("Test",1)
+    checkout.addItem("Test")
+    assert checkout.calculateTotal() == 1
+
