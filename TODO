@@ -1,10 +1,10 @@
 
 Todo:
-  ☐ Get Fizz When I Pass In 3
-  ☐ Get Buzz When I Pass In 5
-  ☐ Get Fizz when I Pass In 6 ( multiple of 3)
-  ☐ Get Buzz When I Pass In 10 (multiple of 5)
-  ☐ Get FizzBuzz When I Pass In 15 (multiple of 3 & 5)
+  ✔ Get Fizz When I Pass In 3 @done(20-07-19 19:59)
+  ✔ Get Buzz When I Pass In 5 @done(20-07-19 19:59)
+  ✔ Get Fizz when I Pass In 6 ( multiple of 3) @done(20-07-19 19:59)
+  ✔ Get Buzz When I Pass In 10 (multiple of 5) @done(20-07-19 19:59)
+  ✔ Get FizzBuzz When I Pass In 15 (multiple of 3 & 5) @done(20-07-19 19:59)
 
   
 Archive:
