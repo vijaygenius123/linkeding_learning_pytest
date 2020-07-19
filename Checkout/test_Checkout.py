@@ -1,4 +1,4 @@
-
+import pytest
 from Checkout import Checkout
 
 """
@@ -11,5 +11,14 @@ from Checkout import Checkout
     ☐ Can apply discount rules to total
     ☐ Exception is thrown if item is added without price
 """
-def test_canInstantiateCheckout():
-    co = Checkout()
+
+@pytest.fixture()
+def checkout():
+    checkout = Checkout()
+    return checkout
+
+def test_canAddItemPrice(checkout):
+    checkout.addItemPrice("Test",1)
+
+def test_canAddItem(checkout):
+    checkout.addItem("Test")
