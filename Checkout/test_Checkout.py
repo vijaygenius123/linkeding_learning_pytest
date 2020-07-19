@@ -2,11 +2,11 @@ import pytest
 from Checkout import Checkout
 
 """
-    ✔ Can Create An Instance Of Checkout class
-    ☐ Can add item price
-    ☐ Can add an item
-    ☐ Can calculate current total price
-    ☐ Can add multiple items and get correct total price
+    ✔ Can Create An Instance Of Checkout class @done(20-07-19 20:04)
+    ✔ Can add item price @done(20-07-19 20:29)
+    ✔ Can add an item @done(20-07-19 20:29)
+    ✔ Can calculate current total price @done(20-07-19 20:29)
+    ✔ Can add multiple items and get correct total price @done(20-07-19 20:29)
     ☐ Can add discount rules
     ☐ Can apply discount rules to total
     ☐ Exception is thrown if item is added without price
@@ -15,23 +15,18 @@ from Checkout import Checkout
 @pytest.fixture()
 def checkout():
     checkout = Checkout()
-    return checkout
-
-def test_canAddItemPrice(checkout):
-    checkout.addItemPrice("Test",1)
-
-def test_canAddItem(checkout):
-    checkout.addItem("Test")
-
-def test_canCalculateTotal(checkout):
-    checkout.addItemPrice("Test",1)
-    checkout.addItem("Test")
-    assert checkout.calculateTotal() == 1
-
-
-def test_getCorrectTotalWithMultipleItems(checkout):
     checkout.addItemPrice("Milk",1)
     checkout.addItemPrice("Bread",2)
+    return checkout
+
+def test_canCalculateTotal(checkout):
+    checkout.addItem("Milk")
+    assert checkout.calculateTotal() == 1
+
+def test_getCorrectTotalWithMultipleItems(checkout):
     checkout.addItem("Milk")
     checkout.addItem("Bread")
     assert checkout.calculateTotal() == 3
+
+def test_canAddDiscountRules(checkout):
+    checkout.addDiscount("Milk",3,2)
