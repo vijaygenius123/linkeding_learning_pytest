@@ -28,3 +28,10 @@ def test_canCalculateTotal(checkout):
     checkout.addItem("Test")
     assert checkout.calculateTotal() == 1
 
+
+def test_getCorrectTotalWithMultipleItems(checkout):
+    checkout.addItemPrice("Milk",1)
+    checkout.addItemPrice("Bread",2)
+    checkout.addItem("Milk")
+    checkout.addItem("Bread")
+    assert checkout.calculateTotal() == 3
