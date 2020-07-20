@@ -7,9 +7,9 @@ from Checkout import Checkout
     ✔ Can add an item @done(20-07-19 20:29)
     ✔ Can calculate current total price @done(20-07-19 20:29)
     ✔ Can add multiple items and get correct total price @done(20-07-19 20:29)
-    ☐ Can add discount rules
-    ☐ Can apply discount rules to total
-    ☐ Exception is thrown if item is added without price
+    ✔ Can add discount rules @done(20-07-19 20:33)
+    ✔ Can apply discount rules to total @done(20-07-20 09:44)
+    ✔ Exception is thrown if item is added without price @done(20-07-20 10:08)
 """
 
 @pytest.fixture()
@@ -37,3 +37,7 @@ def test_canApplyDiscountRules(checkout):
     checkout.addItem("Milk")
     checkout.addItem("Milk")
     assert checkout.calculateTotal() == 2
+
+def test_ExceptionThrownWithBadItem(checkout):
+    with pytest.raises(Exception):
+        checkout.addItem("Unknown")
